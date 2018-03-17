@@ -261,7 +261,7 @@ with open("MacroDB", "r") as dbFile:
     db[entry.name.lower()] = entry
 
 # Read in the meal file
-if len(sys.argv) < 1:
+if len(sys.argv) < 2:
   print "Need to specify file name that has the recipes"
   sys.exit(1)
 
