@@ -1,4 +1,8 @@
 
+//////////////////////
+// Some examples
+//////////////////////
+
 Stirfry - 8 servings
 - cabbage - 23.5 oz
 - oil - 2 tbsp
@@ -6,14 +10,118 @@ Stirfry - 8 servings
 - onion - 11.15 oz
 - mushrooms - 8 oz
 - noodles cooked - 18.05 oz
-- chicken cooked - 20 oz
+- chicken breast cooked - 20 oz
 
 Chili - 10 servings
-- beans - 42 oz
+- black beans cooked - 42 oz
 - oil - 2 tbsp
 - onion - 10.85 oz
 - potato - 10.35 oz
 - mushrooms - 8 oz
 - tomatoes - 26.75 oz
-- chicken cooked - 24 oz
+- chicken breast cooked - 24 oz
 
+///////////////////////////////////////////
+// If you don't specify the servings in
+// this file the prompt will ask for it
+//////////////////////////////////////////
+Peanut butter banana french toast (708.9 cal)
+- egg - 1 large
+- peanut butter - 2 tbsp
+- bread - 2 slice
+- banana - 1.2 med
+- unsalted butter - .5 tbsp
+- pure maple syrup - 1.5 tbsp
+
+
+
+////////////////////////////////////////////////////////////////////////
+//                   Sample Output
+// The meal/recipe, Stirfry - 8 servings, has the following ingredients:
+// ------------
+// cabbage | 23.5 oz | Carb/prot/fat in grams: 35.015/4.935/0.5405
+// oil | 2.0 tbsp | Carb/prot/fat in grams: 0.0/0.0/26.6
+// carrots | 20.4 oz | Carb/prot/fat in grams: 55.08/5.304/1.428
+// onion | 11.15 oz | Carb/prot/fat in grams: 32.335/2.899/0.223
+// mushrooms | 8.0 oz | Carb/prot/fat in grams: 18.4/17.28/1.92
+// noodles cooked | 18.05 oz | Carb/prot/fat in grams: 171.475/45.125/9.025
+// chicken breast cooked | 20.0 oz | Carb/prot/fat in grams: 0.0/175.8/20.2
+// ------------
+// The meal's overall macros and calories are:
+// Carb/prot/fat in grams: 312.305/251.343/59.9365
+// Carb/prot/fat in calories: 1249.22/1005.372/539.4285
+// Total calories: 2794.0205
+// Carb/prot/fat macronutrient ratio: 0.447104808286/0.359829858084/0.193065333629
+// ------------
+// The meal has the following macro measurements per serving:
+// Servings: 8.0
+// Measurements per serving:
+// Carb/prot/fat in grams: 39.038125/31.417875/7.4920625
+// Carb/prot/fat in calories: 156.1525/125.6715/67.4285625
+// Total calories: 349.2525625
+// Carb/prot/fat macronutrient ratio: 0.447104808286/0.359829858084/0.193065333629
+// ------------
+// 
+// 
+// The meal/recipe, Chili - 10 servings, has the following ingredients:
+// ------------
+// black beans cooked | 42.0 oz | Carb/prot/fat in grams: 287.28/83.16/3.36
+// oil | 2.0 tbsp | Carb/prot/fat in grams: 0.0/0.0/26.6
+// onion | 10.85 oz | Carb/prot/fat in grams: 31.465/2.821/0.217
+// potato | 10.35 oz | Carb/prot/fat in grams: 52.2675/4.554/0.2484
+// mushrooms | 8.0 oz | Carb/prot/fat in grams: 18.4/17.28/1.92
+// tomatoes | 26.75 oz | Carb/prot/fat in grams: 27.285/6.1525/1.3375
+// chicken breast cooked | 24.0 oz | Carb/prot/fat in grams: 0.0/210.96/24.24
+// ------------
+// The meal's overall macros and calories are:
+// Carb/prot/fat in grams: 416.6975/324.9275/57.9229
+// Carb/prot/fat in calories: 1666.79/1299.71/521.3061
+// Total calories: 3487.8061
+// Carb/prot/fat macronutrient ratio: 0.477890671732/0.372643995318/0.14946533295
+// ------------
+// The meal has the following macro measurements per serving:
+// Servings: 10.0
+// Measurements per serving:
+// Carb/prot/fat in grams: 41.66975/32.49275/5.79229
+// Carb/prot/fat in calories: 166.679/129.971/52.13061
+// Total calories: 348.78061
+// Carb/prot/fat macronutrient ratio: 0.477890671732/0.372643995318/0.14946533295
+// ------------
+// 
+// 
+// The meal/recipe, Peanut butter banana french toast (708.9 cal), has the following ingredients:
+// ------------
+// egg | 1.0 large | Carb/prot/fat in grams: 0.6/6.0/5.0
+// peanut butter | 2.0 tbsp | Carb/prot/fat in grams: 6.2/8.0/16.2
+// bread | 2.0 slice | Carb/prot/fat in grams: 30.0/8.0/1.0
+// banana | 1.2 med | Carb/prot/fat in grams: 32.4/1.56/0.48
+// unsalted butter | 0.5 tbsp | Carb/prot/fat in grams: 0.0/0.05/6.0
+// pure maple syrup | 1.5 tbsp | Carb/prot/fat in grams: 19.875/0.0/0.0
+// ------------
+// The meal's overall macros and calories are:
+// Carb/prot/fat in grams: 89.075/23.61/28.68
+// Carb/prot/fat in calories: 356.3/94.44/258.12
+// Total calories: 708.86
+// Carb/prot/fat macronutrient ratio: 0.502638038541/0.133227999887/0.364133961572
+// ------------
+// Specify the desired serving amount: 1
+// The meal has the following macro measurements per serving:
+// Servings: 1
+// Measurements per serving:
+// Carb/prot/fat in grams: 89.075/23.61/28.68
+// Carb/prot/fat in calories: 356.3/94.44/258.12
+// Total calories: 708.86
+// Carb/prot/fat macronutrient ratio: 0.502638038541/0.133227999887/0.364133961572
+// ------------
+// 
+// ------------
+// Print aggregated measurement for all meals just measured (on a per serving basis)? [y/n]y
+// ------------
+// 
+// -----------
+// Aggregated measurements (total macros when adding 1 serving measurement for all meals previously shown):
+// Carb/prot/fat in grams: 169.782875/87.520625/41.9643525
+// Carb/prot/fat in calories: 679.1315/350.0825/377.6791725
+// Total calories: 1406.8931725
+// Carb/prot/fat macronutrient ratio: 0.482717176595/0.248833747183/0.268449076222
+////////////////////////////////////////////////////////////////////////

@@ -1,8 +1,8 @@
 #! /usr/bin/python
-#
+
 import sys
 import copy
-
+import re
 
 class Meal:
   def __init__(self, mealName, servingSize, ingredients):
@@ -127,8 +127,10 @@ class Macros:
 # Preserves file position if next line isn't the empty line, otherwise skips over
 def atEmptyLine(inputFile):
     curPos = inputFile.tell()
-    if len(inputFile.readline().rstrip()) is 0:
-        return True
+    line = inputFile.readline().rstrip()
+    line = re.sub(re.compile("\//.*"), "", line) # remove comment lines
+    if len(line) is 0:
+      return True
     inputFile.seek(0)
     inputFile.seek(curPos)
     return False
@@ -180,6 +182,7 @@ def parseIngredient(line) :
 
 ##########################################
 def parseDbEntry(line) :
+  line = re.sub(re.compile("\//.*"), "", line) # remove trailing comments if present  
   substrings = line.split(" | ")
 
   # entry name
@@ -206,8 +209,12 @@ def parseServingSize(fullStr):
 
 #########################################
 def parseMeal(mealFile, eof):
-  while atEmptyLine(mealFile) and not eof.isAtEndOfFile():
+
+  while atEmptyLine(mealFile):
+    if eof.isAtEndOfFile():
+      return None
     continue
+
   recipeTitle = mealFile.readline().rstrip()
   servingSize = parseServingSize(recipeTitle)
         
@@ -215,6 +222,7 @@ def parseMeal(mealFile, eof):
   line = mealFile.readline()
   # Read in the ingredients
   while line and len(line.split()) > 1 and line.split()[0] in "-":
+    line = re.sub(re.compile("\//.*"), "", line) # remove trailing comments if present
     ingredients.append(parseIngredient(line))
     line = mealFile.readline()
   # Read in the macros for the ingredients
@@ -253,7 +261,7 @@ with open("MacroDB", "r") as dbFile:
     db[entry.name.lower()] = entry
 
 # Read in the meal file
-if len(sys.argv) < 2:
+if len(sys.argv) < 1:
   print "Need to specify file name that has the recipes"
   sys.exit(1)
 
@@ -263,6 +271,8 @@ with open(fileName, "r") as mealFile:
   eof = EofCheck(mealFile)
   while not eof.isAtEndOfFile():
     meal = parseMeal(mealFile, eof)
+    if meal is None:
+      continue # Probably end of file...
     print "\n\nThe meal/recipe, " + meal.name + ", has the following ingredients: "
     print "------------"
     meal.printIngredients() 
